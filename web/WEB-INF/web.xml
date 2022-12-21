@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <servlet>
+        <servlet-name>playerServlet</servlet-name>
+        <servlet-class>servlet.player.PlayerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>playerServlet</servlet-name>
+        <url-pattern>/player</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>InitServlet</servlet-name>
+        <servlet-class>servlet.InitServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InitServlet</servlet-name>
+        <url-pattern>/init</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>itemServlet</servlet-name>
+        <servlet-class>servlet.ItemServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>itemServlet</servlet-name>
+        <url-pattern>/item</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>findOrDeleteServlet</servlet-name>
+        <servlet-class>servlet.player.FindOrDeletePlayerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>findOrDeleteServlet</servlet-name>
+        <url-pattern>/playerById</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/static/*</url-pattern>
+    </servlet-mapping>
+</web-app>
